@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>RSCard Collegedunia</title>
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style/css/style.css">
@@ -298,6 +298,14 @@
 				$(".overlay-nav").remove();
 			});
 
+			//nav
+			$("#nav ul > li").on("click", function(){
+				$("#nav ul > li").removeClass('active')
+				$(this).addClass('active');
+			});
+			
+
+			
 
 			$(window).scroll(function() {
 			   var hT = $('#skills').offset().top,

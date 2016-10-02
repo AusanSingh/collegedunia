@@ -12,6 +12,7 @@
 $base-font:'Fredoka One', sans-serif;
 $font-open-sans:'open sans', sans-serif;
 $bg-color: #4c545f;
+$green-color: #00cc66;
 
 
 html {
@@ -628,7 +629,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     margin-bottom: 5px;
   }
   .bar-fill {
-  	background: #00cc66;
+  	background: $green-color;
     width: 0;
     height: 100%;
     display: block;
@@ -656,7 +657,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
-      background: #00cc66;
+      background: $green-color;
     }
   }
 }
@@ -681,7 +682,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 .timeline {
   position: relative;
   .timeline-bar {
-    background: #00cc66;
+    background: $green-color;
     content: '';
     width: 4px;
     opacity: 0.2;
@@ -724,7 +725,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     margin-bottom: 30px;
   }
   .date {
-    color: #00cc66;
+    color: $green-color;
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
@@ -764,7 +765,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .timeline-box-inner {
-  border-color: #00cc66;
+  border-color: $green-color;
   background: #fff;
   padding: 20px 5%;
   position: relative;
@@ -817,7 +818,7 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     }
   }
   .dot {
-    background: #00cc66;
+    background: $green-color;
     right: 0px;
     margin-right: -4px;
   }
