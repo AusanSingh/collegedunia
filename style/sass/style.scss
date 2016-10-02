@@ -393,26 +393,26 @@ html {
 }
    .profile-info {
     color: #3d4451;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     border-bottom: 1px solid #dedede; }
     .profile-title {
     font-size: 36px;
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 5px; 
-	span {
+		span {
 	      font-weight: 300; }
 	      }
 	      .profile-position {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 0; }
+		    font-size: 18px;
+		    font-weight: 400;
+		    line-height: 1.1;
+		    margin: 0; }
 }
 
 .profile-preword {
-  margin-bottom: 28px; }
+  margin-bottom: 18px; 
   .profile-preword span {
   	background: #26cc63;
     color: #fff;
@@ -436,6 +436,7 @@ html {
       border-color: transparent; 
       border-left-color: #26cc63;	
       }
+	}
 }
 
 .profile-list {
@@ -671,6 +672,194 @@ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     padding-bottom: 35px;
     .row:last-child .col-sm-6:last-child .progress-bar {
       margin-bottom: 0;
+    }
+  }
+}
+
+
+
+.timeline {
+  position: relative;
+  .timeline-bar {
+    background: #00cc66;
+    content: '';
+    width: 4px;
+    opacity: 0.2;
+    margin-left: -2px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+  }
+  .timeline-inner {
+    position: relative;
+  }
+}
+
+.timeline-box {
+  width: 50%;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  h3 {
+    color: #414141;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: #878787;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .date {
+    color: #00cc66;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.timeline-box-compact {
+  .date, h3, h4 {
+    text-align: left;
+  }
+  .date span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    padding: 5px 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      top: 100%;
+      left: 5px;
+      display: block;
+      position: absolute;
+      border-style: solid;
+      border-width: 0 0 8px 8px;
+      border-color: transparent;
+    }
+  }
+}
+
+.timeline-box-inner {
+  border-color: #00cc66;
+  background: #fff;
+  padding: 20px 5%;
+  position: relative;
+  border-width: 5px 0 0 0;
+  border-style: solid;
+}
+
+.timeline-box-left .dot, .timeline-box-right .dot {
+  top: 80px;
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.timeline-box-left .arrow, .timeline-box-right .arrow {
+  top: 60px;
+  width: 12px;
+  height: 41px;
+  display: block;
+  position: absolute;
+  background-image: url(img/arrows.png);
+  background-repeat: no-repeat;
+}
+
+.timeline-box-left .arrow:before, .timeline-box-right .arrow:before {
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+}
+
+.timeline-box-left {
+  float: left;
+  clear: left;
+  .timeline-box-inner {
+    margin-right: 35px;
+    .arrow {
+      right: -12px;
+      background-position: -18px 0;
+      &:before {
+        margin-right: 2px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 10px solid #fff;
+      }
+    }
+  }
+  .dot {
+    background: #00cc66;
+    right: 0px;
+    margin-right: -4px;
+  }
+}
+
+.timeline-box-right {
+  float: right;
+  clear: right;
+  .timeline-box-inner {
+    margin-left: 35px;
+    .arrow {
+      left: -12px;
+      background-position: 0 0;
+      &:before {
+        margin-left: 2px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 10px solid #fff;
+      }
+    }
+  }
+  .dot {
+    left: 0px;
+    margin-left: -4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-box {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    .timeline-box-inner {
+      margin-left: 0;
+      margin-right: 0;
+      .arrow {
+        display: none;
+      }
+    }
+    .dot {
+      display: none;
     }
   }
 }
